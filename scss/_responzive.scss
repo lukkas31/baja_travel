@@ -1,7 +1,160 @@
 /*media queries*/
 
 @media (max-width: 1010px){
+}
+
+@media (min-width: 1340px){
+}
+
+@media (min-width: 992px) and (max-width: 1339px){
+
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .page-header .container{
+        justify-content: space-around;
+    }
+    
     .container-item >.destination-item{
         width: 50%;
     }
+
+    .footer .container .footer-item{
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px){
+    section{
+        padding: 5em 0;
+    }
+
+    /*header responsive*/
+    .header-logo h1{
+        font-size: 2.5rem;
+
+        span{
+           font-size: 2rem; 
+        }
+    }
+    .page-header .container{
+        justify-content: space-around;
+    }
+    .navigation{
+        justify-content: flex-end;
+        align-items: center;
+        min-width: 0;
+    }
+    .phone-number{
+        display: none;
+    }
+    
+    .content-wrap{
+        text-align: center;
+        ul{
+            display: block;
+            
+            li{
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin-left: 0;
+            }
+        }
+    }
+    
+    /*welcome section responzive*/
+    .welcome .about-card-container{
+        flex-wrap: wrap;
+        width: 100%;
+        
+        .card-container{
+            width: 100%;
+        }
+        
+        .card-container:nth-child(2){
+            margin: 1.5rem;
+        }
+    }
+    
+    /*destination section responsive*/
+    
+    .container-item >.destination-item{
+        width: 50%;
+        padding: .2rem;
+    }
+    
+    /*blog section responsive*/
+    
+    .grid-container .blog{
+        width: 100%;
+        min-height: 200px;
+
+        .aside-blog{
+            min-height: 200px;
+            width: 55%;
+            p{
+                display: none;
+            }          
+        }
+    }
+
+    /*rating cliens section responsive*/
+
+    .rating-box{
+        display: block;
+        width: 90%;
+        text-align: center;
+        padding: 1.5rem;
+
+        .content-inner{
+            margin: 1rem auto;
+            padding: 0;
+            width: 100%;
+
+            p{
+                padding: 0;
+                width: 100%;
+            }
+        }
+
+        .image-inner{
+            margin: 0 auto;
+        }
+    }
+    
+    
+    /*discount section responzive*/
+    .discount{
+        p{
+           font-size: 2.5rem;
+           margin-bottom: 2rem; 
+        }
+    }
+
+    /*footer section responsive*/
+    .footer .container .footer-item{
+        width: 100%;
+        font-size: 2rem;
+
+        &.about{
+            display: none;
+        }
+
+        &.follow{
+            ul{
+                font-size: 4rem;
+            }
+            
+            li{
+                width: 33.33%;
+            }
+        }
+    }
+
+    .footer .container .footer-item-inner{
+        width: 100%;
+        text-align: center;
+    }
+    
 }
