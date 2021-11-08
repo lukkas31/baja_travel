@@ -10,7 +10,8 @@ body{
 }
 
 /*COLOR & text settings*/
-$logo-main-orange: rgb(251, 173, 39);
+$logo-main-orange: rgb(60, 196, 151);
+$bg-orange: rgb(225, 255, 250);
 $dark-color: rgb(90, 90, 90);
 $light-color: rgb(226, 226, 226);
 
@@ -24,9 +25,9 @@ a{
 }
 
 h2{
-   font-size: 3rem;
-   font-weight: 300;
-   margin: 1rem;
+    font-size: 3rem;
+    font-weight: 300;
+    margin: 1rem;
 }
 
 h5{
@@ -34,6 +35,70 @@ h5{
     font-weight: 300;
     margin: 1rem;
     margin-bottom: 3rem;
+}
+/*mine menu ---------------------*/
+.main-menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: $light-color;
+    width: 60%;
+    height: 100%;
+    z-index: 50;
+    transition-delay: 2s;
+    transition: 1s;
+    
+    ul{
+        position: relative;
+        width: 80%;
+        margin: 0 auto;
+        list-style-type: none;
+        text-align: center;
+        padding: 1em 0;
+    }
+    
+    li{
+        font-size: 1.8rem;
+        padding: 1rem 0;
+        
+        a{
+            color: $dark-color;
+            transition: .3;
+        }
+        
+        span{
+            display: none;
+        }
+    }
+    
+    .call-menu{
+        font-size: 1.1rem;
+        color: $logo-main-orange;
+        
+        i{
+            margin-right: .7rem;
+        }
+    }
+    
+    .main-menu-hider{
+        text-align: right;
+        cursor: pointer;
+        i{
+            font-size: 3rem;
+            padding: 1.5rem;
+        }
+    }
+}
+
+
+
+.main-menu a:hover,
+.main-menu a:active{
+    color: $logo-main-orange;
+    
+    span{
+        display: inline-block;
+    }
 }
 
 section{
@@ -50,27 +115,32 @@ section{
     position: absolute;
     top: 0;
     width: 100%;
-    padding: 2rem 0 2rem;
+    padding: 1rem 0 1rem;
     z-index: 20;
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,0) 4%, rgba(38,38,38,1) 100%);
+    background: rgba(38,38,38,.5);
+    background: linear-gradient(0deg, rgba(255,255,255,0) 4%, rgba(38,38,38,.5) 100%);
 }
 
 .container{
     margin: 0 auto;
 }
 
-.page-header .container{
-    display: flex;
-    justify-content: space-between;
-
+.page-header{
+    position: fixed;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        
+    }
 }
 
 .header-logo{
+    cursor: pointer;
     h1{
         margin: 0;
         color: $light-color;
-        letter-spacing: 0;
+        letter-spacing: 0.03rem;
+        font-family: 'Lobster', cursive;
         
         span{
             color: $logo-main-orange;
@@ -83,25 +153,31 @@ section{
 
 .navigation{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     min-width: 250px;
+    z-index: 99;
     
     .phone-number{
         width: 80%;
         padding: .5rem;
         a{
-            color: rgba($light-color, .8);
+            color: $light-color;
             font-size: .9rem;
             text-decoration: none;
             transition: .3s;
+            text-shadow: 1px 2px 9px rgba(0,0,0,0.8);
+            font-weight: 500;
             
             &:hover,
             &:active{
-                color: rgba($light-color, 1);
+                color: $logo-main-orange;
             }
         }
         
         i{
             padding-right: .5rem;
+            text-shadow: 1px 2px 9px rgba(0,0,0,0.8);
         }
     }
     
@@ -117,15 +193,28 @@ section{
     flex-direction: column;
     justify-content: space-between;
     width: 40px;
-    height: 25px;
+    height: 19px;
+    transition: .4s;
     
     span{
         width: 100%;
-        height: 2px;
+        height: 2.5px;
         background-color: $light-color;
+        transition: .4s;
+
+        &:nth-child(2){
+            width: 80%;
+        }
         
     }
     
+    &:hover{
+        height: 23px;
+
+        span:nth-child(2){
+            width: 100%;
+        }
+    }
 }
 
 /*HEADER COVER*/
@@ -133,46 +222,48 @@ section{
     width: 100%;
     height: 750px;
     overflow: hidden;
-    background: url("../img/cover_travel2.jpg") center center no-repeat;
+    background: url("../img/capturing.jpg") center center no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
+
 }
 
 .content-wrap{
     width: 100%;
     height: 100%;
     text-align: right;
-
+    
     ul{
         list-style-type: none;
         padding: 0;
         display: flex;
         justify-content: flex-end;
-    
+        
         li{
             display: inline-block;
             margin-left: 2rem;
         }
-    
+        
     }
 }
 
 h1{
     font-size: 3.5rem;
-    color: $light-color;
+    color: rgb(255, 255, 255);
     margin: .2rem 0;
     letter-spacing: .3rem;
     text-shadow: 1px 2px 9px rgba(0,0,0,0.8);
     span{
         color: $logo-main-orange;
+        font-size: 4.5rem;
     }
 }
 
 h3{
     font-size: 1.2rem;
-    color: $light-color;
-    font-weight: 300;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
     margin: .2rem 0 5rem 0;
 }
 
@@ -184,7 +275,7 @@ a.button{
     color: rgb(255, 255, 255);
     text-decoration: none;
     transition: .3s;
-
+    
     &:hover,
     &:active{
         background-color: $light-color;
@@ -196,18 +287,23 @@ a.button{
 
 .welcome{
     width: 100%;
+    overflow: hidden;
+    background-color: $light-color;
+    background-image: url("../img/Beznazvu-1.svg");
+    background-position: -35% 130%;
+    background-repeat: no-repeat;
 }
 
 .about-container{
     width: 70%;
     margin: 0 auto;
     text-align: center;
-
+    
     h1{
         font-weight: 400;
         color: $dark-color;
     }
-
+    
     p{
         color: $dark-color;
     }
@@ -227,18 +323,18 @@ a.button{
     padding: 1.8rem;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.2);
-
+    
     i{
         font-size: 2.5rem;
         color: $logo-main-orange;
         margin: 0 0 1rem 0;
     }
-
+    
     h4{
         font-weight: 400;
         color: $dark-color;
     }
-
+    
     p{
         margin: 0;
         font-weight: 300;
@@ -257,21 +353,26 @@ a.button{
 
 .destination{
     position: relative;
-    background-color: $light-color;
+    background-color: $logo-main-orange;
 }
 
 .slide{
     width: 100%;
+    overflow: hidden;
 }
 
 
 .container-item{
     width: 100%;
     margin: auto;
-    display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     margin: 3rem 0;
+    display: none;
+}
+
+.active{
+    display: flex;
 }
 
 .container-item >.destination-item{
@@ -281,12 +382,13 @@ a.button{
     display: inline-flex;
     height: 300px;
     padding: 2rem;
-
+    
     & .inner{
         position: relative;
         width: 100%;
         height: 100%;
         overflow: hidden;
+        box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.2);
         
         &::after{
             content: '';
@@ -385,9 +487,17 @@ a.button{
     }
 }
 
+.destination .arrow-holder aside{
+    &:hover i,
+    &:active i{
+        color: $light-color;
+    }
+}
+
 /*blog section*/
 .blog{
     min-height: 300px;
+    overflow: hidden;
 
     .container{
         height: 100%;
@@ -399,7 +509,7 @@ a.button{
     flex-direction: column;
     justify-content: space-between;
     
-    .blog{
+    .blog-box{
         position: relative;
         width: 70%;
         margin: 2rem auto;
@@ -452,22 +562,39 @@ a.button{
 }
 
 /*rating section*/
+.rating{
+    position: relative;
+    background-color: $light-color;
 
+}
 .rating .arrow-holder{
     padding: 4rem 0;
 }
 .rating-box{
     margin: 0 auto;
+    position: relative;
     padding: 2rem;
     width: 550px;
     overflow: hidden;
-    display: flex;
+    display: none;
     justify-content: space-around;
     align-items: center;
     background-color: rgb(253, 253, 253);
     box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.2);
+    z-index: 30;
+    
+    &::before{
+        content: '"';
+        position: absolute;
+        top: -8rem;
+        left: 11rem;
+        font-size: 18rem;
+        color: $light-color;
+        padding-top: 5rem;
+    }
     
     .image-inner{
+        position: relative;
         width: 130px;
         height: 130px;
         overflow: hidden;
@@ -503,9 +630,13 @@ a.button{
     }
 }
 
+.rating-container .active{
+    display: flex;
+}
+
 /*discount section*/
 .discount{
-    padding: 5rem 0;
+    padding: 5rem 1rem;
     background: $logo-main-orange;
     .container{
         display: flex;
@@ -531,6 +662,7 @@ a.button{
 /*footer section*/
 .footer{
     padding-bottom: 0;
+    background-color: $light-color;
 }
 .footer .container{
     display: flex;
