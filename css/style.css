@@ -116,9 +116,7 @@ section {
   width: 100%;
   padding: 1rem 0 1rem;
   z-index: 20;
-  background: rgba(38, 38, 38, 0.5);
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(4%, rgba(255, 255, 255, 0)), to(rgba(38, 38, 38, 0.5)));
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 4%, rgba(38, 38, 38, 0.5) 100%);
+  background: #3cc497;
 }
 
 .container {
@@ -185,8 +183,79 @@ section {
   font-weight: 500;
 }
 
-.navigation .phone-number a:hover, .navigation .phone-number a:active {
-  color: #3cc497;
+.navigation .phone-number a:hover i, .navigation .phone-number a:active i {
+  -webkit-animation: phone 1s 1 linear;
+          animation: phone 1s 1 linear;
+}
+
+@-webkit-keyframes phone {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  20% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  30% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  45% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  60% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  75% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  85% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes phone {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  20% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  30% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  45% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  60% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  75% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  85% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
 }
 
 .navigation .phone-number i {
@@ -658,7 +727,6 @@ a.button:hover, a.button:active {
   background-color: #fdfdfd;
   -webkit-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
-  z-index: 30;
 }
 
 .rating-box::before {
