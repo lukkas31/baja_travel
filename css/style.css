@@ -154,6 +154,18 @@ section {
   text-transform: lowercase;
 }
 
+.header-logo h1 .logo_globe {
+  font-size: 3.7rem;
+  margin-left: .1rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.header-logo:hover .logo_globe,
+.header-logo:active .logo_globe {
+  margin-left: 0.7rem;
+}
+
 .navigation {
   display: -webkit-box;
   display: -ms-flexbox;
